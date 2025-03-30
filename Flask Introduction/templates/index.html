@@ -12,7 +12,14 @@
         <form method="POST">
             <label for="birth_year">Enter Your Birth Year</label>
             <input type="number" id="birth_year" name="birth_year" required><br>
-
+            <button type="submit">Calculate Age</button>
         </form>
-    </body>
+        {% if age is not none %}
+            <h2>Your Age Is: {{ age }}</h2>
+        {% endif %}
+        
+        {% if error is not none %}
+            <h2 style="color:red;">{{error}}</h2>
+        {% endif %}    
+</body>
 </html>
